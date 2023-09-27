@@ -1,6 +1,10 @@
-import { movies } from "./../movies";
+
+
+import { useSelector } from "react-redux";
 
 export default function Movie(props) {
+
+  const movies = useSelector((state) => state.movies);
   const movie = movies[props.sira];
 
   return (
@@ -26,5 +30,5 @@ export default function Movie(props) {
         </div>
       </div>
     </div>
-  )
-};
+  );
+}
